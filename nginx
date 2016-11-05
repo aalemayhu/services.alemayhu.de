@@ -1,0 +1,32 @@
+# Etherpad: note taking
+server {
+	listen 80;
+	server_name notizen.alemayhu.de
+	access_log  /var/log/nginx/etherpad-access.log;
+	error_log   /var/log/nginx/etherpad-error.log;
+	location / {
+		proxy_pass http://alemayhu.de:9001;
+	}
+}
+
+# Frikanalen broadcasting
+server {
+	listen 80;
+	server_name frikanalen.alemayhu.de
+	access_log  /var/log/nginx/frikanalen-access.log;
+	error_log   /var/log/nginx/frikanalen-error.log;
+	location / {
+		proxy_pass http://alemayhu.de:8000;
+	}
+}
+
+# Jenkins build server
+server {
+	listen 80;
+	server_name bauen.alemayhu.de
+	access_log  /var/log/nginx/bauen-access.log;
+	error_log   /var/log/nginx/bauen-error.log;
+	location / {
+		proxy_pass http://alemayhu.de:5000;
+	}
+}
