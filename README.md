@@ -2,6 +2,8 @@
 
 Some apps I run.
 
-- Etherpad, http://notizen.alemayhu.de/
-- Jenkins, http://bauen.alemayhu.de/
-- Frikanalen, http://frikanalen.alemayhu.de/
+- Cgit: https://git.alemayhu.de/
+- Etherpad: https://notizen.alemayhu.de/
+- Frikanalen: https://frikanalen.alemayhu.de/
+- Jenkins: https://bauen.alemayhu.de/
+- Owncloud: https://owncloud.alemayhu.de/
