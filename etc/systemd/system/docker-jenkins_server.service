@@ -1,0 +1,11 @@
+[Unit]
+Description=Jenkins container
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker run -u root -p 5000:8080 -p 50000:50000 -v /srv/jenkins:/var/jenkins_home jenkins
+
+[Install]
+WantedBy=default.target
